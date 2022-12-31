@@ -1,0 +1,72 @@
+Inheritance :- The capability of a class to derive properties
+             and characteristics from another class is called Inheritance.
+
+Derived Class:- The class that inherits properties 
+               from another class is called Subclass or Derived Class.
+               
+Base Class:- The class whose properties are inherited by a subclass 
+            is called Base Class or Superclass. 
+            
+ Syntax: 
+
+ class  <derived_class_name> : <access-specifier> <base_class_name>
+ {
+        //body
+ }
+ 
+class — keyword to create a new class
+derived_class_name   —  name of the new class, which will inherit the base class
+access-specifier  — either of private, public or protected. If neither is specified, PRIVATE is taken as default
+base-class-name  — name of the base class
+
+Example of access specifier:
+
+=> class ABC : private XYZ                //private derivation
+            {                }
+=> class ABC : public XYZ                 //public derivation
+            {               }
+=> class ABC : protected XYZ              //protected derivation
+            {              }
+=> class ABC: XYZ                        //private derivation by default
+{            }
+
+
+** "Types Of Inheritance" 
+
+
+1. Single inheritance  :-    
+                                [ Base class ]
+                                      ⇓
+                               [ Derived class ]
+                              
+2. Multiple inheritance :-  
+
+                   [ Base class 1]     [ Base class 2 ]
+                           ⇘                 ⇙
+                            [ Derived class ]
+
+3. Multilevel inheritance  :-     
+
+                               [ Base class ]
+                                     ⇓
+                            [ intermediate class ]
+                                     ⇓
+                                [ Sub class ]
+
+4. Hierarchical inheritance :-
+
+                             [one Base class ] 
+                             ⇙               ⇘               
+                 [ Derived class 1 ]      [ Derived class 2 ]
+
+
+5. Hybrid inheritance :- 
+
+                            [ Base class ] 
+                           ⇙             ⇘   
+             [ Derived class 1 ]      [ Derived class 2 ] 
+                           ⇘              ⇙
+                          [ Derived class 3 ]
+                          
+                          
+                          
