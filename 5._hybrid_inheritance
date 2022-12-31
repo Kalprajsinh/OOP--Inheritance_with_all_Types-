@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+
+class A                  // supper class 
+{
+   protected: 
+   int a = 10;
+};
+
+class B : virtual public A        // derived class inherit class A
+{
+   protected:
+   int b = 20;
+
+   public:
+   void funB()
+   {
+      cout<<"Sum of a & b ="<<a+b<<endl;
+   }
+};
+
+class C : virtual public A        // derived class inherit class A
+{
+    protected:
+    int c = 30;
+   public:
+   void function()
+   {
+      cout<<"Sum of a & c ="<<a+c<<endl;
+   }
+   
+};
+
+class D : public B , public C              // both multiput and Hierarchical inheritance in one
+{
+   public:
+   void function()
+   {
+      cout<<"Sum of a , b & c ="<<a+b+c<<endl;
+   }
+};
+
+int main()
+{                  //make class D object and 
+    D d1;          //add class A(Supper class) + derived class B&C in child class D
+    d1.function();
+    return 0;
+}
