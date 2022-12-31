@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+class A     // base class
+{
+   protected:
+   int a = 20;
+
+   void fun()
+   {
+      cout<<"in class A";
+   }
+};
+
+class B : public A      // derived class
+{
+   protected:
+   int b = 35;
+};
+
+class C : public B     // derived from derived class B
+{
+   public:
+   void function()
+   {
+      cout<<"Sum of a & b = "<<a+b<<endl;
+      fun();
+   }
+};
+
+int main()
+{
+    C obj;
+    obj.function();
+    
+    return 0;
+}
