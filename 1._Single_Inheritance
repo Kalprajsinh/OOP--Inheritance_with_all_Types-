@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+class A     //base class
+{
+   protected:
+   int a = 25;
+
+};
+
+class B : private A       // derived class
+{
+   public:
+   void function()
+   {
+      cout<<"value of a from Base class = "<<a;
+   }
+   
+};
+
+int main()
+{
+    B obj;
+    obj.function();
+    
+    return 0;
+}
