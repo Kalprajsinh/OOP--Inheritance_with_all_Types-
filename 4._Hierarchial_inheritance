@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+
+class A         // Base class
+{
+   protected:
+   int a1 = 10;
+   int a2 = 20;
+
+   public:
+   void funA()
+   {
+      cout<<"in class A"<<endl;
+   }
+};
+
+class B : public A   // derived class 1
+{
+   public:
+   void funB()
+   {
+      cout<<"Sum of a1 & a2 = "<<a1+a2<<endl;
+   }
+};
+
+class C : public A      // derived class 2
+{
+   public:
+   void funC()
+   {
+      cout<<"multiplication a1 & a2 = "<<a1*a2<<endl;
+      funA();
+   }
+   
+};
+
+int main()
+{
+    B b1;
+    b1.funB();
+    
+    C c1;
+    c1.funC();
+    return 0;
+}
